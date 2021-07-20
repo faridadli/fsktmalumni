@@ -165,9 +165,12 @@
 			$unique_file_name = time(). $_SERVER['REMOTE_ADDR']. $_FILES['img']['name']; 
 			$targetFilePath = $targetDir;
 			// Upload file to server
-				if(move_uploaded_file($_FILES['img']['tmp_name'], $targetFilePath.$id.$unique_file_name)){
-					// Insert image file name into database
-					$insert = $con->query("UPDATE alumni_profile SET profile_pic='$fileName' WHERE alumni_id=$id");
+                if(move_uploaded_file($_FILES['img']['tmp_name'], $targetFilePath.$id.$unique_file_name)){
+                    //Insert data into database
+                    $filesave=$id.$unique_file_name;
+                    $stmt = $con->prepare('UPDATE alumni_profile SET  profile_pic=? WHERE alumni_id=?');
+                    $stmt->bind_param('si',$filesave,$id);
+                    $stmt->execute();
 				}else{
 					echo "error";
 				}

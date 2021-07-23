@@ -12,3 +12,11 @@ Alumni:
 Faculty Administrator:
   * Manage Alumni account (can view the list of alumni, update alumni information, approve a new alumni account and delete an account).
   * Create a new event to invite alumni to join, can update and delete the event.
+
+Contributors: 
+  * Aiman Shahran - Landing pages, Register and Login account, Admin dashboard, Admin feedback
+  * Azri Hanif - Admin event, Alumni job
+  * Azhan - Alumni event, Alumni job
+  * Zeqry Iskandar - Alumni profile page, View and Add other Alumni as friend, Alumni friend request
+  * Faiz Aiman - Admin event, Search alumni and view the alumni profile
+  * Farid Adli - Alumni event, Notification
